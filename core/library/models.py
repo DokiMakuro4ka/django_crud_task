@@ -18,5 +18,5 @@ class Books (models.Model):
     isbn = models.CharField(max_length=100, unique=True)
     publication_year = models.IntegerField()
     genres = models.CharField(max_length=100)
-    co_authors = models.CharField(max_length=100)
+    co_author = models.CharField(max_length=100)
     summary = models.TextField()
