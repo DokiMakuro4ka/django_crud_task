@@ -6,7 +6,23 @@
 </head>
 <body>
     <form method="post">
-        {% for book in books %}
+        {% csrf_token %}
+        <input type="text" name="title", placeholder="Название книги">
+        <select name="authors" id="authors">
+            {% for author in authors %}
+            <option value="{{ author.id }}">{{ author.first_name }} {{ author.last_name }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="isbn", placeholder="ISBN номер">
+        <input type="number" name="publication_year", placeholder="Год публикации">
+        <select name="genres" id="genres">
+            {% for genres in genres %}
+            <option value="{{ genres.id }}">{{ genres.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="co_author", placeholder="Соавтор">
+        <input type="text" name="summary", placeholder="Описание книги">
+        <button type="submit">add</button>
     </form>
 </body>
 <script></script>

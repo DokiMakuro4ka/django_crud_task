@@ -8,5 +8,6 @@
     {% for book in books %}
     <a href="{% url 'books_details' book.id %}" class="href book_title">{{ book.title }}</a>
     {% endfor %}
+    <a href="{% url 'book_add' %}"><button type="submit">Добавить книгу</button></a>
 </body>
 </html>

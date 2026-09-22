@@ -20,7 +20,7 @@ from library import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('books/', views.books_list, name='view_books'),
+    path('', views.books_list, name='view_books'),
     path('books/<int:book_id>/', views.books_details, name='books_details'),
-    # path('books/new', views.Boo)
+    path('books/add', views.book_add, name='book_add')
 ]
