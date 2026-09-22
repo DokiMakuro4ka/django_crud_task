@@ -1,8 +1,6 @@
 from django.shortcuts import render
 
 # Create your views here.
-<<<<<<< HEAD
-=======
 
 def books_list (request):
     books = Books.objects.all()
@@ -34,4 +32,3 @@ def book_add (request):
         authors = Authors.objects.all()
         genres = Genres.objects.all()
     return render (request, 'books_add.html', {'books': books, 'authors': authors, 'genres': genres})
->>>>>>> d9aabd1 (ВыполнилУсловияДляСущностиКниги)
